@@ -30,6 +30,8 @@ The samsungDataSet provided differs from the orignal data set as follows:
 * The subject and activity have been added into the data set rather than being provided as separate files
 * Only the mean and standard deviation values are included with this data set.
 
+Refer to the README.md file for information on how the data was transformed.
+
 ## Data Elements
 
 * **subject** - the test subject (1 to 30) that performed the activity
