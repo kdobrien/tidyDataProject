@@ -3,6 +3,7 @@ This data set is based on data from the http://archive.ics.uci.edu/ml/datasets/H
 
 The data set is available from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
+## Description
 From the README.txt file provided with the data set:
 
 > The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
@@ -20,6 +21,16 @@ From the README.txt file provided with the data set:
   variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
 Each value except subject and activity fall within the range of -1 to +1.
+
+## Modifications to the original data set
+
+The samsungDataSet provided differs from the orignal data set as follows:
+
+* Data from the test and training data sets have been merged into a single data set.
+* The subject and activity have been added into the data set rather than being provided as separate files
+* Only the mean and standard deviation values are included with this data set.
+
+## Data Elements
 
 * **subject** - the test subject (1 to 30) that performed the activity
 * **activity** - the activity performed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING or LAYING)
