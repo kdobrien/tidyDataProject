@@ -10,7 +10,7 @@ library(LaF) # Package to handle large ascii files efficiently
 df <- laf_open_fwf(filename="X_train.txt",column_types=rep("numeric",length(dataLabels$V2)),column_widths=rep(16,length(dataLabels$V2)))
 tdata <- df[,]  # Get the entire data set from the opened file
 subjects = read.csv("subject_train.txt",header=FALSE)
-activities = read.csv("Y_train.txt",header=FALSE)
+activities = read.csv("y_train.txt",header=FALSE)
 data <- cbind(subject=subjects$V1,activity=activities$V1,tdata) # Merge the subject and activity colums with the data
 
 #### Load test data and merge the subject and activities with the data
@@ -18,9 +18,10 @@ data <- cbind(subject=subjects$V1,activity=activities$V1,tdata) # Merge the subj
 df <- laf_open_fwf(filename="X_test.txt",column_types=rep("numeric",length(dataLabels$V2)),column_widths=rep(16,length(dataLabels$V2)))
 tdata <- df[,]  # Get the entire data set from the opened file
 subjects = read.csv("subject_test.txt",header=FALSE)
-activities = read.csv("Y_test.txt",header=FALSE)
+activities = read.csv("y_test.txt",header=FALSE)
 data2 <- cbind(subject=subjects$V1,activity=activities$V1,tdata) # Merge the subject and activity colums with the data
 
+# Now merge the two data sets using rbing
 fdata <- rbind(data,data2) # Combine the two sets of data into a single set
 
 ##################################################################
@@ -30,7 +31,7 @@ dataLabels = read.csv("features.txt",sep=" ",header=FALSE,colClasses=c("integer"
 colnames(fdata) = c("subject", "activity", dataLabels$V2)
 
 ##############################################
-# 2. Extract only the measurements on the mean and standard deviation for each measurement
+# 2. Extract only the measurements on the mean and standard deviation for each feature
 # Extract column 1,2 and all columns with -mean and -std (mean and std deviation)
 b <- c(1,2,sort(c(grep("-mean",colnames(fdata)),grep("-std",colnames(fdata)))))
 data <- fdata[,b] # Get just the columns we want from the data
@@ -51,5 +52,5 @@ data$activity = g             # Replace ints with labels
 # 5. Create tidy data set with the average of each variable for each activity and each subject
 tds <- aggregate(. ~ subject + activity, data=data, mean)
 write.table(tds,file="samsungDataSet.txt",row.names=FALSE)
-prompt(tds,filename="samsungCodeBook.md")
+###prompt(tds,filename="samsungCodeBook.md") # Provides a starting point to create the code book
 
