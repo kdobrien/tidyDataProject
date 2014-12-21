@@ -31,6 +31,7 @@ The samsungDataSet provided differs from the orignal data set as follows:
 * Data from the test and training data sets have been merged into a single data set.
 * The subject and activity have been added into the data set rather than being provided as separate files
 * Only the mean and standard deviation features are included with this data set.
+* The average of each subject+activity instance is provided to summarize multiple observations.
 
 Refer to the README.md file for information on how the data was transformed.
 
