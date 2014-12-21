@@ -1,7 +1,8 @@
-# Code book for tidy data set
-This data set is based on data from the http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones web site.
+# Code book for tidy data set (samsungDataSet)
+This data set is based on data from the http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+web site[1].  Refer to the license for this data set at the end of this document. 
 
-The data set is available from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+The original data is available from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
 ## Description
 From the README.txt file provided with the data set:
@@ -22,17 +23,41 @@ From the README.txt file provided with the data set:
 
 Each value except subject and activity fall within the range of -1 to +1.
 
+
 ## Modifications to the original data set
 
 The samsungDataSet provided differs from the orignal data set as follows:
 
 * Data from the test and training data sets have been merged into a single data set.
 * The subject and activity have been added into the data set rather than being provided as separate files
-* Only the mean and standard deviation values are included with this data set.
+* Only the mean and standard deviation features are included with this data set.
 
 Refer to the README.md file for information on how the data was transformed.
 
 ## Data Elements
+
+From the features_info.txt file of the original data
+
+> The features selected for this database come from the accelerometer and gyroscope 3-axial raw 
+signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were 
+captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 
+3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. 
+Similarly, the acceleration signal was then separated into body and gravity acceleration signals 
+(tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner 
+frequency of 0.3 Hz. 
+
+> Subsequently, the body linear acceleration and angular velocity were derived in time to obtain 
+Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional 
+signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, 
+tBodyGyroMag, tBodyGyroJerkMag). 
+
+> Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, 
+fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to 
+indicate frequency domain signals). 
+
+Acceleration measurements are in standard gravity units 'g'.
+
+Angular velocity measurements are in radians/second.
 
 * **subject** - the test subject (1 to 30) that performed the activity
 * **activity** - the activity performed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING or LAYING)
@@ -116,3 +141,14 @@ Refer to the README.md file for information on how the data was transformed.
 * **fBodyBodyGyroJerkMag-std()** - The *standard deviation*  of fBodyBodyGyroJerkMag
 * **fBodyBodyGyroJerkMag-meanFreq()** - The *mean* of fBodyBodyGyroJerkMag frequency
 
+
+### Original Data Set License
+
+[1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. 
+Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. 
+International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012.
+
+This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors 
+or their institutions for its use or misuse. Any commercial use is prohibited.
+
+Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
