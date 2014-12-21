@@ -3,17 +3,17 @@ This data set is based on data from the http://archive.ics.uci.edu/ml/datasets/H
 The data set is available from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
 
-      * **subject**** - the test subject (1 to 30) that performed the activity
-      * **activity**** - the activity performed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING or LAYING
-      * ****tBodyAcc-mean()-X**** - The mean of tBodyAcc for the X axis
-      * **tBodyAcc-mean()-Y**** - The mean of tBodyAcc for the Y axis
-      * **tBodyAcc-mean()-Z**** - The mean of tBodyAcc for the Z axis
-      * **tBodyAcc-std()-X**** - The standard deviation of tBodyAcc for the X axis
-      * **tBodyAcc-std()-Y**** - The standard deviation of tBodyAcc for the Y axis
-      * **tBodyAcc-std()-Z**** - The standard deviation of tBodyAcc for the Z axis
-      * **tGravityAcc-mean()-X**** - The mean of tGravityAcc for the X axis
-      * **tGravityAcc-mean()-Y**** - The mean of tGravityAcc for the Y axis
-      * **tGravityAcc-mean()-Z**** - The mean of tGravityAcc for the Z axis
+      * **subject** - the test subject (1 to 30) that performed the activity
+      * **activity** - the activity performed (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING or LAYING
+      * ****tBodyAcc-mean()-X** - The mean of tBodyAcc for the X axis
+      * **tBodyAcc-mean()-Y** - The mean of tBodyAcc for the Y axis
+      * **tBodyAcc-mean()-Z** - The mean of tBodyAcc for the Z axis
+      * **tBodyAcc-std()-X** - The standard deviation of tBodyAcc for the X axis
+      * **tBodyAcc-std()-Y** - The standard deviation of tBodyAcc for the Y axis
+      * **tBodyAcc-std()-Z** - The standard deviation of tBodyAcc for the Z axis
+      * **tGravityAcc-mean()-X** - The mean of tGravityAcc for the X axis
+      * **tGravityAcc-mean()-Y** - The mean of tGravityAcc for the Y axis
+      * **tGravityAcc-mean()-Z** - The mean of tGravityAcc for the Z axis
       * **tGravityAcc-std()-X** - The standard deviation of tGravityAcc for the X axis
       * **tGravityAcc-std()-Y** - The standard deviation of tGravityAcc for the Y axis
       * **tGravityAcc-std()-Z** - The standard deviation of tGravityAcc for the Z axis
